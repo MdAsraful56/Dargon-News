@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { CgProfile } from "react-icons/cg";
 
 
@@ -37,9 +37,9 @@ const Navbar = () => {
                     }
                     </ul>
                 </div>
-                <div className="navbar-end ">
+                <div className="navbar-end ml-20 ">
                     <CgProfile />
-                    <button className="btn">Login</button>
+                    <Link to="/login" className="btn btn-ghost">Login</Link>
                 </div>
             </div>
         </div>

@@ -8,14 +8,15 @@ const Header = () => {
             <header className='flex flex-col items-center justify-center gap-2'>
                 <img className='w-[350px]' src={logo} alt="" />
                 <h4 className="text-lg text-gray-400">Journalism Without Fear or Favour</h4>
-                <div className="flex flex-row items-center justify-center gap-4">
+                <div className="flex flex-row items-center justify-center gap-2">
                     <button className="btn btn-error text-white text-lg">Latest</button>
-                    <p className="">Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...</p>
+                    <marquee className='text-lg'>Match Highlights: Germany vs Spain — as it happened ! Match Highlights: Germany vs Spain as...</marquee>
                 </div>
                 <Navbar />
             </header>
         </div>
     );
 };
+
 
 export default Header;
