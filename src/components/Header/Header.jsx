@@ -1,4 +1,5 @@
 import logo from '../../assets/logo.png';
+import Navbar from '../Navbar/Navbar';
 
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
                     <button className="btn btn-error text-white text-lg">Latest</button>
                     <p className="">Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...</p>
                 </div>
+                <Navbar />
             </header>
         </div>
     );
