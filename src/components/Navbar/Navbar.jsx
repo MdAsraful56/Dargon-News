@@ -1,5 +1,6 @@
-import { Link, NavLink } from "react-router";
+import {  NavLink } from "react-router";
 import { CgProfile } from "react-icons/cg";
+// import userIcon from '../../assets/user.png'
 
 
 const Navbar = () => {
@@ -8,39 +9,19 @@ const Navbar = () => {
         <NavLink to="/" className="btn btn-ghost">Home</NavLink>
         <NavLink to="/about" className="btn btn-ghost">About</NavLink>
         <NavLink to="/career" className="btn btn-ghost">Career</NavLink>
-
     </>
 
 
     return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm ">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                    </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {
-                            nav
-                        }
-                    </ul>
-                    </div>
-
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                    {
-                        nav
-                    }
-                    </ul>
-                </div>
-                <div className="navbar-end ml-20 ">
-                    <CgProfile />
-                    <Link to="/login" className="btn btn-ghost">Login</Link>
-                </div>
+        <div className="flex justify-between ">
+            <div className=""></div>
+            <div className="nav">
+                {nav}
+            </div>
+            <div className="lgoin flex flex-row items-center gap-2">
+                {/* <img src={userIcon} alt="" /> */}
+                <CgProfile className="text-3xl" />
+                <button className="btn btn-neutral rounded-base gap-2 items-center text-lg font-semibold">Login</button>
             </div>
         </div>
     );
