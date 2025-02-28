@@ -16,8 +16,6 @@ const LeftNavbar = () => {
     }, []); // fetch categories from api
 
 
-
-
     // data demo 
     // {
     //     "category_id": "01",

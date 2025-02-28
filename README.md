@@ -41,24 +41,6 @@ The base URL for the API is:
 
 There will be three layour for the project. watch below designs to understand layout structure/
 
-### Home Layout
-
- <img src="design/home-layout.png"/>
-
-### News-Details Layout
-
- <img src="design/news-details-layout.png"/>
-
-### Auth Layout
-
-<table>
- <tr>
-   <td> <img  src="design/auth-layout-login.png"/></td>
-   <td> <img src="design/auth-layout-register.png"/></td>
- 
- </tr> 
-</table>
-
 
 
 
@@ -73,7 +55,4 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
-
 
