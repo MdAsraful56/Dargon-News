@@ -1,4 +1,5 @@
 import LeftNavbar from "../layouts/LeftNavbar";
+import MainLayout from "../layouts/MainLayout";
 import RightNavbar from "../layouts/RightNavbar";
 
 
@@ -11,7 +12,7 @@ const HomeLayout = () => {
                     <LeftNavbar />
                 </aside>
                 <aside className='col-span-6'>
-                    
+                    <MainLayout />
                 </aside>
                 <aside className='col-span-3'>
                     <RightNavbar />
