@@ -24,7 +24,7 @@ const LeftNavbar = () => {
 
     return (
         <div>
-            <h2 className="font-semibold mb-4">All Caterogy</h2>
+            <h2 className="font-semibold mb-4">All Caterogy ( 0{categories.length} ) </h2>
             <div className="flex flex-col gap-2">
                 {
                     categories.map( category => 

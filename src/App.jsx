@@ -15,7 +15,7 @@ function App() {
         <Route path='/login' element={ <Login /> } />
         <Route path='/registration' element={ <Registration /> } />
         <Route path='/' element={  <HomeLayout /> } > 
-          <Route path='/category/:id' element={ <h2>This is category</h2> } />
+          <Route path='category/:category_id}' element={ <h2>This is category</h2> } />
         </Route>
 
       </Route>
