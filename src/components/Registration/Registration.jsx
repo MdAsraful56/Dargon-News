@@ -3,7 +3,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from './../../firebase/firebase.init';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Registration = () => {
@@ -22,8 +22,10 @@ const Registration = () => {
         createUserWithEmailAndPassword(auth , email, password)
         .then(result => {
             console.log(result.user);
+            toast.success('Registration successfull');
         }).catch(error => {
             console.log(error.message);
+            toast.error(error.message);
         })
     }
 
@@ -57,6 +59,7 @@ const Registration = () => {
                     <button className="btn btn-primary w-full">Registration</button>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };

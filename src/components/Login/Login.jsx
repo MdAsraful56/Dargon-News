@@ -1,7 +1,9 @@
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import auth from "../../firebase/firebase.init";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -15,6 +17,15 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+        signInWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            console.log(result.user);
+            toast.success('Login successfull');
+        }).catch(error => {
+            console.log(error.message);
+            toast.error(error.message);
+        })
     }
 
 
@@ -43,6 +54,7 @@ const Login = () => {
                     <button className="btn btn-primary w-full">Login</button>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
