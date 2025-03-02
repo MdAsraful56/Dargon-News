@@ -8,13 +8,14 @@ const Registration = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const handleLogin = (e) => {
+    const handleRegistration = (e) => {
         e.preventDefault();
-        console.log('login');
+        console.log('Registration form submitted');
 
+        const userName = e.target.UserName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
+        console.log(userName ,email, password);
     }
 
 
@@ -23,14 +24,18 @@ const Registration = () => {
         <div className="login bg-gray-700 p-10 w-1/2 mx-auto rounded-lg mt-10 ">
             <h1 className="text-3xl mb-8">Registration new account</h1>
             <div className="text-left p-10 bg-gray-800 rounded-lg">
-                <form onSubmit={handleLogin}>
+                <form onSubmit={handleRegistration}>
+                    <div className="mb-4">
+                        <label htmlFor="name" className="block text-white">UserName</label>
+                        <input type="text" placeholder="UserName" name="UserName" id="UserName" className="w-full p-2 rounded-lg" />
+                    </div>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-white">Email</label>
-                        <input type="email" name="email" id="email" className="w-full p-2 rounded-lg" />
+                        <input type="email" placeholder="example@mail.com" name="email" id="email" className="w-full p-2 rounded-lg" />
                     </div>
                     <div className="mb-4 relative">
                         <label htmlFor="password" className="block text-white">Password</label>
-                        <input type={showPassword ? 'text' : 'password'} name="password" id="password" className="w-full p-2 rounded-lg" />
+                        <input type={showPassword ? 'text' : 'password'} placeholder="Password" name="password" id="password" className="w-full p-2 rounded-lg" />
                         {/* {
                             showPassword ? <FaEyeSlash className="absolute right-4 top-9 text-white" /> : <FaEye className="absolute right-4 top-9 text-white" />
                         } */}

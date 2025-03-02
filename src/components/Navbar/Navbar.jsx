@@ -1,5 +1,5 @@
 import {  Link, NavLink } from "react-router";
-import { CgProfile } from "react-icons/cg";
+// import { CgProfile } from "react-icons/cg";
 // import userIcon from '../../assets/user.png'
 
 
@@ -20,7 +20,10 @@ const Navbar = () => {
             </div>
             <div className="lgoin flex flex-row items-center gap-2">
                 {/* <img src={userIcon} alt="" /> */}
-                <CgProfile className="text-3xl" />
+                {/* <CgProfile className="text-3xl" /> */}
+                <Link to='/registration'>
+                    <button className="btn btn-neutral rounded-base gap-2 items-center text-lg font-semibold">Registration</button>
+                </Link>
                 <Link to='/login'>
                     <button className="btn btn-neutral rounded-base gap-2 items-center text-lg font-semibold">Login</button>
                 </Link>
